@@ -143,8 +143,8 @@ a{
 
 @media screen and (max-width: 492px) {
     .find{
-        font-size: 25px;
-        word-spacing: 10px;
+        font-size: 18px;
+        word-spacing: 8px;
     }
     .icon{
         height: 25px;
@@ -161,13 +161,13 @@ a{
         border-radius: 0%;
     }
     .info{
-        padding: 12px 1.8%;
-        font-size: 10px;
+        padding: 15px 1.8% 15px;
+        font-size: 12px;
         margin: 0%;
         text-decoration: none;
-        padding-top: 20px;
     }
     #welcome-message{
-        font-size: 25px;
+        font-size: 20px;
+        padding-right: 5px;
     }
 }
