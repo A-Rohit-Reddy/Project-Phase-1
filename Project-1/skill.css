@@ -1,0 +1,122 @@
+body{
+    margin: 0%;
+    background-color: #c6baba;
+    height: 100vh;
+    width: 100vw;
+}
+h1{
+    font-size: 45px;
+    margin-left: 20px;
+    color: rgb(73, 21, 21);
+}
+#contents{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #2B2B2B;
+    padding: 10px 2px;
+    color: #FFFFFF;
+    flex: 1;
+}
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.info{
+    padding: 10px 35px;
+    font-size: 25px;
+    margin: 0%;
+}
+ul.a{
+    list-style-type: square;
+    font-size: 35px;
+    color: #2B2B2B;
+}
+li{
+    margin-left: 10%;
+}
+b{
+    font-size: 35px;
+}
+
+.lang{
+    display: grid;
+    column-gap: 20px;
+    margin: 60px 0px;
+    grid-template-columns: 2fr 4fr;
+}
+.head{
+    font-size: 35px;
+    font-weight: bolder;
+    color: rgb(73, 21, 21);
+}
+.content{
+    color: rgb(73, 21, 21);
+    font-size: 25px;
+    margin-right: 90px;
+}
+#skills{
+    padding-bottom: 20px;
+}
+@media screen and (max-width: 1200px) {
+    
+}
+
+@media screen and (max-width: 1024px) {
+    .head{
+        font-size: 25px;
+        font-weight: bolder;
+        color: rgb(73, 21, 21);
+    }
+    .content{
+        color: rgb(73, 21, 21);
+        font-size: 17px;
+        margin-right: 90px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .info{
+        padding: 10px 2.3%;
+        font-size: 15px;
+        margin: 0%;
+        text-decoration: none;
+    }
+    .head{
+        font-size: 19px;
+        font-weight: bolder;
+        color: rgb(73, 21, 21);
+    }
+    .content{
+        color: rgb(73, 21, 21);
+        font-size: 17px;
+        margin-right: 40px;
+    }
+    .lang{
+        margin: 30px 0px;
+    }
+    ul.a{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 492px) {
+    .info{
+        padding: 10px 2.3%;
+        font-size: 15px;
+        margin: 0%;
+        text-decoration: none;
+    }
+    .head{
+        font-size: 15px;
+    }
+    .content{
+        font-size: 14px;
+    }
+    .lang{
+        margin: 30px 0px;
+    }
+    ul.a{
+        font-size: 20px;
+    }
+}
