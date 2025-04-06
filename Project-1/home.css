@@ -143,7 +143,7 @@ a{
 
 @media screen and (max-width: 492px) {
     .find{
-        font-size: 14px;
+        font-size: 16px;
         word-spacing: 8px;
     }
     .icon{
@@ -157,17 +157,17 @@ a{
     .pic1{
         width: 30%;
         height: 40%;
-        margin: 180px auto;
+        margin: 120px auto;
         border-radius: 0%;
     }
     .info{
-        padding: 15px 1.8% 15px;
-        font-size: 12px;
+        padding: 15px 1.8% 5px;
+        font-size: 13px;
         margin: 0%;
         text-decoration: none;
     }
     #welcome-message{
-        font-size: 18px;
+        font-size: 20px;
         padding-right: 5px;
     }
 }
