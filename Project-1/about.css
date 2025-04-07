@@ -1,74 +1,92 @@
-body{
-    margin: 0%;
-    background-color: #c6baba;
+/* Reset + Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-h1{
-    font-size: 60px;
-    margin-left: 20px;
-    color: #5C4E4E;
+body {
+    font-family: 'Chewy', cursive;
+    background-color: #B3B3B3;
+    color: #222;
+    line-height: 1.6;
+    min-height: 100vh;
 }
-p{
-    font-size: 25px;
-}
-#contents{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+
+/* Navbar */
+.navbar {
     background-color: #2B2B2B;
-    padding: 10px 2px;
-    color: #FFFFFF;
-    flex: 1;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-a{
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links li a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background 0.3s, color 0.3s;
 }
-.info{
-    padding: 10px 2.3%;
-    font-size: 25px;
-    margin: 0%;
-}
-.myInfo{
-    padding: 0px 45px;
-    color: #422701;
-}
-
-@media screen and (max-width: 1200px) {
-    
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: #444;
+    border-radius: 5px;
 }
 
-@media screen and (max-width: 1024px) {
-    h1{
-        font-size: 40px;
-    }
+.logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
+/* Main Content */
+.about-content {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+.about-content h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.about-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Divider */
+hr {
+    margin: 40px 0;
+    border: none;
+    border-top: 2px solid #070707;
+}
+
+
+/* Responsive */
 @media screen and (max-width: 768px) {
-    .info{
-        padding: 10px 2.3%;
-        font-size: 15px;
-        margin: 0%;
-        text-decoration: none;
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
     }
-    h1{
-        font-size: 35px;
+    .about-content h1 {
+        font-size: 28px;
     }
-    p{
-        font-size: 20px;
+    .about-content p {
+        font-size: 16px;
     }
-}
-
-@media screen and (max-width: 492px) {
-    .info{
-        padding: 10px 2.3%;
-        font-size: 15px;
-        margin: 0%;
-        text-decoration: none;
-    }
-    h1{
-        font-size: 25px;
-    }
-    p{
-        font-size: 15px;
-    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 }

@@ -1,173 +1,206 @@
-body{
-    margin: 0%;
-    padding: 0%;
+/* Reset & Base Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Chewy', cursive;
     background-color: #B3B3B3;
+    color: #001111;
+    line-height: 1.6;
+}
+
+body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
 }
 
-#details{
-    font-size: 55px;
-    text-align: center;
-    padding-top: 2%;
-    font-weight: bolder;
-    margin-left: 30px;
-    font-family: 'Chewy';
-}
-
-.pic1 {
-    display: block;
-    width: 36%;
-    height: 90%;
-    margin: 25px auto 5px;
-    padding-left: 60px;
-    border-radius: 50%;
-}
-a{
-    text-decoration: none;
-    color: #FFFFFF;
-}
-.info{
-    padding: 10px 2.3%;
-    font-size: 25px;
-    margin: 0%;
-    text-decoration: none;
-}
-.icon{
-    height: 50px;
-    padding: 0px 50px;
-}
-
-#contents{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    background-color: #2B2B2B;
-    padding: 10px;
-    color: #FFFFFF;
+.main-container {
     flex: 1;
-}
-#icons{
     display: flex;
-    background-color: #3d3c3c;
-    flex: 2;
+    flex-direction: column;
+}
+
+/* Navbar Styles */
+header {
+    background-color: #2B2B2B;
+    color: white;
+    padding: 15px 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
-.find{
-    font-size: 45px;
-    width: 70%;
-    color: #FFFFFF;
-    text-align: left;
-    word-spacing: 30px;
-    padding-left: 2%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #faf5f5;
-    font-weight: bolder;
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
-#welcome-message {
-    margin-top: 15px;
-    font-size: 38px;
-    color: #001111;
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background 0.3s, color 0.3s;
+}
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.logo {
+    font-size: 24px;
     font-weight: bold;
-    margin-left: 30px;
-    text-align: left;
-    font-family: 'Chewy';
-    letter-spacing: 0px;
-    word-spacing: 4px;
 }
 
-@media screen and (max-width: 1200px) {
-    .find{
-        font-size: 30px;
-        word-spacing: 30px;
-    }
-    .icon{
-        height: 50px;
-        padding: 0px 50px;
-    }
+/* Intro Section */
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 40px;
+    justify-content: center;
+    gap: 30px;
 }
 
-@media screen and (max-width: 1024px) {
-    .find{
-        font-size: 25px;
-        word-spacing: 25px;
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.intro-text h1 {
+    font-size: 62px;
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 24px;
+}
+
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    margin: 40px 20px;
+}
+
+.welcome p {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Social Media Section */
+.social {
+    background-color: #3d3c3c;
+    color: #faf5f5;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.social h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.social-icons img {
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #2B2B2B;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    .icon{
-        height: 40px;
-        padding: 0px 40px;
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
     }
-    #details{
-        font-size: 40px;
-        padding-top: 12%;
+
+    .intro {
+        flex-direction: column;
+        text-align: center;
     }
-    .pic1{
-        border-radius: 0%;
+
+    .intro-text h1 {
+        font-size: 36px;
     }
-    .info{
+
+    .intro-text p {
+        font-size: 20px;
+    }
+
+    .welcome p {
         font-size: 24px;
     }
-}
 
-@media screen and (max-width: 768px) {
-    .find{
-        font-size: 25px;
-        word-spacing: 15px;
+    .social-icons {
+        gap: 20px;
     }
-    .icon{
-        height: 30px;
-        padding: 0px 20px;
-    }
-    #details{
-        font-size: 30px;
-        padding-top: 25%;
-    }
-    .pic1{
-        width: 40%;
-        height: 70%;
-        margin: 62px auto;
-        border-radius: 0%;
-    }
-    .info{
-        padding: 10px 2.3%;
-        font-size: 15px;
-        margin: 0%;
-        text-decoration: none;
-        padding-top: 20px;
-    }
-    #welcome-message{
-        font-size: 30px;
+
+    .social-icons img {
+        height: 40px;
     }
 }
 
-@media screen and (max-width: 492px) {
-    .find{
+@media screen and (max-width: 480px) {
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links li a {
         font-size: 16px;
-        word-spacing: 8px;
     }
-    .icon{
-        height: 25px;
-        padding: 0px 10px;
+
+    .intro-text h1 {
+        font-size: 28px;
     }
-    #details{
-        font-size: 25px;
-        padding-top: 40%;
-    }
-    .pic1{
-        width: 30%;
-        height: 40%;
-        margin: 120px auto;
-        border-radius: 0%;
-    }
-    .info{
-        padding: 15px 1.8% 5px;
-        font-size: 13px;
-        margin: 0%;
-        text-decoration: none;
-    }
-    #welcome-message{
+
+    .welcome p {
         font-size: 20px;
-        padding-right: 5px;
+    }
+
+    .social-icons img {
+        height: 30px;
     }
 }
+
