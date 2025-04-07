@@ -46,25 +46,39 @@ body {
 
 /* Education Content */
 #edu {
-    padding: 40px 20px;
-    max-width: 1400px;
+    padding: 40px 30px;
+    max-width: 1200px;
     margin: auto;
 }
-#edu h1 {
-    font-size: 32px;
+.edu-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+.edu-text {
+    flex: 1 1 60%;
+    padding-right: 20px;
+}
+.edu-text h1 {
+    font-size: 36px;
     margin-bottom: 10px;
 }
-.text {
-    font-size: 18px;
+.edu-text .text {
+    font-size: 20px;
     margin-bottom: 10px;
 }
 .icon {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
 }
-
-/* Updated build class with hover animation */
+.edu-image {
+    flex: 1 1 30%;
+    display: flex;
+    justify-content: center;
+}
 .build {
     width: 200px;
     height: 130px;
@@ -77,10 +91,6 @@ body {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.image1, .image2, .image3 {
-    margin-bottom: 30px;
-}
-
 /* Divider */
 hr {
     margin: 40px 0;
@@ -88,36 +98,55 @@ hr {
     border-top: 2px solid #070707;
 }
 
-/* Responsive */
+/* Responsive: Tablets & Below */
+@media screen and (max-width: 1024px) {
+    .edu-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .edu-text {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    .edu-text h1 {
+        font-size: 28px;
+    }
+    .edu-text .text {
+        font-size: 16px;
+    }
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+    .build {
+        width: 160px;
+        height: 100px;
+        border-radius: 45px;
+    }
+}
+
+/* Mobile */
 @media screen and (max-width: 768px) {
     .nav-links {
         flex-direction: column;
         gap: 10px;
         margin-top: 10px;
     }
-
-    #edu h1 {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .edu-text h1 {
         font-size: 24px;
     }
-
-    .text {
-        font-size: 16px;
+    .edu-text .text {
+        font-size: 14px;
     }
-
-    .icon {
-        width: 25px;
-        height: 25px;
-    }
-
     .build {
         width: 140px;
         height: 90px;
         border-radius: 40px;
     }
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
 }
 
 
